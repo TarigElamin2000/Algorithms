@@ -32,7 +32,6 @@ class isCycle:
     def create_adjList(self):
         for v, u in self.edges:
             self.adjlist[v].append(u)
-        return
     
     def dfs(self,node,visited: set()) -> bool:
 
@@ -43,7 +42,6 @@ class isCycle:
 
         for nei in self.adjlist[node]:
             if not self.dfs(nei,visited):
-                print(visited)
                 return False
             
         return True
